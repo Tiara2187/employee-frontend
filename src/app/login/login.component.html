@@ -1,0 +1,56 @@
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<body>
+    <div class="container">
+      <div class="row px-3">
+        <div class="col-lg-10 col-xl-9 card flex-row mx-auto px-0">
+          <div class="img-left d-none d-md-flex"></div>
+  
+          <div class="card-body">
+            <h2 class="title text-center mt-4">
+              Login into account
+            </h2>
+            <form class="form-box px-3 was-validated">
+              <div class="form-input">
+                <span><i class="fa fa-envelope-o"></i></span>
+                <input 
+                type="email" 
+                class="form-control"
+               />
+                <small class="invalid-feedback" >Please fill a valid Email.</small>
+
+              </div>
+              <div class="form-input">
+                <span><i class="fa fa-key"></i></span>
+                <input 
+                type="password" 
+                class="form-control"
+                />
+                <small class="invalid-feedback">Must be 6-20 characters long.</small>
+              </div> 
+  
+              <div class="mb-3">
+                <a [routerLink]="['../admins/home']" type="button" class="btn btn-dark text-uppercase">
+                  Login
+                </a>
+              </div>
+  
+              <div class="text-right">
+                <a [routerLink]="['../forget-password']"  class="forget-link">
+                  Forget Password?
+                </a>
+              </div>
+              
+              <hr class="my-4">
+  
+              <div class="text-center mb-2">
+                Don't have an account?
+                <a [routerLink]="['../register']" class="register-link">
+                    Register here
+                  </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
