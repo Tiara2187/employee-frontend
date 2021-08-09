@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="title">UPDATED EMPLOYEE</div>
+    <div class="title">UPDATED DATA EMPLOYEE</div>
     <form class="content">
       <form >
         <div class="user-details">
@@ -79,14 +79,12 @@
               <label class="validation-message">This field is required.</label>
             </div>
           </div>
-
-          
         </div>
         <div class="button">
-            <a type="submit" class="btn btn-dark submit-btn">Save</a>
-            
-            <a type="submit" class="btn btn-secondary submit-btn1">Cancel</a>
-        </div>
+          <a type="submit" class="btn btn-dark submit-btn">Save</a>
+          
+          <a [routerLink]="'/admins/employee-list'" type="submit" class="btn btn-secondary submit-btn1">Cancel</a>
+      </div>
       </form>
     </form>
   </div>

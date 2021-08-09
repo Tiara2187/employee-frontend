@@ -13,8 +13,12 @@
               <div class="form-input">
                 <span><i class="fa fa-envelope-o"></i></span>
                 <input 
-                type="email" 
-                class="form-control"
+                  type="email"
+                  id="email" 
+                  name="email" 
+                  placeholder="Email Address" 
+                  tabindex="10" 
+                  required
                />
                 <small class="invalid-feedback" >Please fill a valid Email.</small>
 
@@ -23,7 +27,12 @@
                 <span><i class="fa fa-key"></i></span>
                 <input 
                 type="password" 
+                id="password"
                 class="form-control"
+                placeholder="Password" 
+                required
+                minlength="6"
+                maxlength="20"
                 />
                 <small class="invalid-feedback">Must be 6-20 characters long.</small>
               </div> 
@@ -39,7 +48,6 @@
                   Forget Password?
                 </a>
               </div>
-              
               <hr class="my-4">
   
               <div class="text-center mb-2">
