@@ -1,51 +1,187 @@
 <main class="mt-5 pt-3">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-3 mb-3">
-          <div class="card bg-primary text-white h-100">
+        <div class="col-md-4 mb-4">
+          <div class="card bg-danger text-white h-100">
+            <i
+              class="fa fa-user-o fa-2x text-lightblue"
+              aria-hidden="true"
+            ></i>
             <div class="card-body py-5">Employee</div>
             <div class="card-footer d-flex">
-              View Details
-              <span class="ms-auto">
-                <i class="bi bi-chevron-right"></i>
-              </span>
+              <p class="text-primary-p">Number of Employee : </p>
+              <span class="font-bold text-title">100</span>
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-3">
-          <div class="card bg-warning text-dark h-100">
-            <div class="card-body py-5">Commpany</div>
+        <div class="col-md-4 mb-4">
+          <div class="card bg-warning text-white h-100">
+            <i class="fa fa-calendar fa-2x text-red" aria-hidden="true"></i>
+            <div class="card-body py-5">Attendance</div>
             <div class="card-footer d-flex">
-              View Details
-              <span class="ms-auto">
-                <i class="bi bi-chevron-right"></i>
-              </span>
+              <p class="text-primary-p">Number of Attendance : </p>
+                <span class="font-bold text-title"> 6</span>
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-3">
+        <div class="col-md-4 mb-4">
           <div class="card bg-success text-white h-100">
-            <div class="card-body py-5">Finnance</div>
+            <i class="fa fa-book fa-2x text-yellow" aria-hidden="true"></i>
+            <div class="card-body py-5">Project</div>
             <div class="card-footer d-flex">
-              View Details
-              <span class="ms-auto">
-                <i class="bi bi-chevron-right"></i>
-              </span>
+              <p class="text-primary-p">Number of Project : </p>
+              <span class="font-bold text-title">60</span>
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-3">
-          <div class="card bg-danger text-white h-100">
-            <div class="card-body py-5">Leave</div>
-            <div class="card-footer d-flex">
-              View Details
-              <span class="ms-auto">
-                <i class="bi bi-chevron-right"></i>
-              </span>
-            </div>
+      </div>
+    </div>
+
+    <div class="charts">
+      <div class="charts__left">
+        <div class="charts__right__title">
+          <div>
+            <h1>Attendance Reports</h1>
+          </div>
+          <i class="fa  fa-user-o" aria-hidden="true"></i>
+        </div>
+
+        <div class="charts__right__cards">
+          <div class="card1">
+            <h1>Sick</h1>
+            <p>0</p>
+          </div>
+
+          <div class="card2">
+            <h1>Leave</h1>
+            <p>4</p>
+          </div>
+
+          <div class="card3">
+            <h1>Attendance</h1>
+            <p>0</p>
+          </div>
+
+          <div class="card4">
+            <h1>Permission</h1>
+            <p>2</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="charts__right">
+        <div class="charts__right__title">
+          <div>
+            <h1>Stats Reports</h1>
+          </div>
+          <i class="fa fa-usd" aria-hidden="true"></i>
+        </div>
+
+        <div class="charts__right__cards">
+          <div class="card1">
+            <h1>Income</h1>
+            <p>100.000.000</p>
+          </div>
+
+          <div class="card2">
+            <h1>Sales</h1>
+            <p>50.000.000</p>
+          </div>
+
+          <div class="card3">
+            <h1>Users</h1>
+            <p>3900</p>
+          </div>
+
+          <div class="card4">
+            <h1>Orders</h1>
+            <p>1881</p>
           </div>
         </div>
       </div>
     </div>
     
   </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script>
+    var options = {
+    series: [
+      {
+        name: "Net Profit",
+        data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
+      },
+      {
+        name: "Revenue",
+        data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
+      },
+      {
+        name: "Free Cash Flow",
+        data: [35, 41, 36, 26, 45, 48, 52, 53, 41],
+      },
+    ],
+    chart: {
+      type: "bar",
+      height: 250, // make this 250
+      sparkline: {
+        enabled: true, // make this true
+      },
+    },
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        columnWidth: "55%",
+        endingShape: "rounded",
+      },
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    stroke: {
+      show: true,
+      width: 2,
+      colors: ["transparent"],
+    },
+    xaxis: {
+      categories: ["Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct"],
+    },
+    yaxis: {
+      title: {
+        text: "$ (thousands)",
+      },
+    },
+    fill: {
+      opacity: 1,
+    },
+    tooltip: {
+      y: {
+        formatter: function (val) {
+          return "$ " + val + " thousands";
+        },
+      },
+    },
+  };
+  
+  var chart = new ApexCharts(document.querySelector("#apex1"), options);
+  chart.render();
+  
+  // Sidebar Toggle Codes;
+  
+  var sidebarOpen = false;
+  var sidebar = document.getElementById("sidebar");
+  var sidebarCloseIcon = document.getElementById("sidebarIcon");
+  
+  function toggleSidebar() {
+    if (!sidebarOpen) {
+      sidebar.classList.add("sidebar_responsive");
+      sidebarOpen = true;
+    }
+  }
+  
+  function closeSidebar() {
+    if (sidebarOpen) {
+      sidebar.classList.remove("sidebar_responsive");
+      sidebarOpen = false;
+    }
+  }
+  </script>
