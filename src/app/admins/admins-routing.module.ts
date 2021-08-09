@@ -6,6 +6,7 @@ import { EmployeeListComponent } from './employee/employee-list/employee-list.co
 import { EmployeeAddComponent } from './employee/employee-add/employee-add.component';
 import { EmployeeDetailComponent } from './employee/employee-detail/employee-detail.component';
 import { EmployeeUpdatedComponent } from './employee/employee-updated/employee-updated.component';
+import { MaintanceComponent } from './employee/maintance/maintance.component';
 
 const appRoutes: Routes = [
   {
@@ -17,7 +18,8 @@ const appRoutes: Routes = [
       { path: 'employee-list', component: EmployeeListComponent},
       { path: 'employee-add', component: EmployeeAddComponent},
       { path: 'employee-detail', component: EmployeeDetailComponent},
-      { path: 'employee-updated', component: EmployeeUpdatedComponent}
+      { path: 'employee-updated', component: EmployeeUpdatedComponent},
+      { path: 'maintance', component: MaintanceComponent}
     ]
   }
 ]

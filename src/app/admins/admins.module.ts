@@ -9,6 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EmployeeAddComponent } from './employee/employee-add/employee-add.component';
 import { EmployeeDetailComponent } from './employee/employee-detail/employee-detail.component';
 import { EmployeeUpdatedComponent } from './employee/employee-updated/employee-updated.component';
+import { MaintanceComponent } from './employee/maintance/maintance.component';
 
 
 
@@ -19,7 +20,8 @@ import { EmployeeUpdatedComponent } from './employee/employee-updated/employee-u
     EmployeeListComponent,
     EmployeeAddComponent,
     EmployeeDetailComponent,
-    EmployeeUpdatedComponent
+    EmployeeUpdatedComponent,
+    MaintanceComponent
   ],
   imports: [
     CommonModule,
